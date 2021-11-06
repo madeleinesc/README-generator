@@ -1,4 +1,7 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
+const inquirer = require('inquirer');
+
+
 
 // array of questions for user input
 const questions = [
@@ -50,6 +53,11 @@ const questions = [
         message: 'Provide your github profile URL'
     },
 ];
+
+// function for question prompts
+userInput = () => {
+    return inquirer.prompt(questions)
+};
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
