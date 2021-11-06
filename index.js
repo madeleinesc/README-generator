@@ -17,8 +17,38 @@ const questions = [
         name: 'installation',
         message: 'Provide instructions on how to install your project.',
     },
-    
-
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Provide instructions on how to use your project.',
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Please choose the licensing needed for this project.',
+        choices: [
+            'MIT',
+            'GNU',
+            'Apache 2.0',
+            'BSD 3',
+            'None',
+        ]
+    },
+    {
+        type: 'input',
+        name: 'contributing',
+        message: 'Provide instructions as to how someone can contribute to your project',
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'Provide instructions on how to test your project',
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Provide your github profile URL'
+    },
 ];
 
 // TODO: Create a function to write README file
