@@ -46,7 +46,7 @@ const questions = [
     {
         type: 'input',
         name: 'credits',
-        message: 'Provide your github username.'
+        message: 'Provide your github username/URL.'
     },
     {
         type: 'list',

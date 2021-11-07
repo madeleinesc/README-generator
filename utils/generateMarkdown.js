@@ -30,7 +30,7 @@ generateMarkdown = (data) => {
   # Installation
   ${data.installation}
 
-  # usage
+  # Usage
   ${data.usage}
 
   # Contributing
@@ -40,14 +40,13 @@ generateMarkdown = (data) => {
   ${data.tests}
 
   # Questions
-  If you have any queries or questions in relation to this application, please send to do ${data.questions}.
+  If you have any queries or questions in relation to this application, please send to ${data.questions}.
 
   # Credits
   ${data.credits}
 
   # License
   ${data.license}
-
 `;
 }
 
