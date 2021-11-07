@@ -55,14 +55,11 @@ const questions = [
         choices: [
             'MIT',
             'GNU',
-            'Apache 2.0',
-            'BSD 3',
+            'Apache',
+            'BSD',
             'None',
         ]
     },
-
-
-
 ];
 
 // function for question prompts
@@ -70,12 +67,12 @@ userInput = () => {
     return inquirer.prompt(questions)
 };
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+//Created a function to write README file
+writeToFile = (fileName, data) => {
+    fs.writeFileSync(fileName, data)
+}
 
 // TODO: Create a function to initialize app
-
-
 init = () => {
     userInput()
 
