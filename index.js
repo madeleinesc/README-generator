@@ -1,4 +1,4 @@
-// packages needed for this application
+// packages needed for application
 const inquirer = require('inquirer');
 
 const fs = require('fs');
@@ -67,18 +67,24 @@ userInput = () => {
     return inquirer.prompt(questions)
 };
 
-//Created a function to write README file
+// function to write README file
 writeToFile = (fileName, data) => {
     fs.writeFileSync(fileName, data)
 }
 
-// TODO: Create a function to initialize app
+// function to initialize app
 init = () => {
+    //question array
     userInput()
-
+    //generate readme file
+    .then((answers) => fs.writeFileSync('README.md', generateMarkdown(answers)))
+    //console log to show readme has been done
+    .then(() => console.log('Congratulations! You have successfully written to README.md!'))
+    //to catch error
+    .catch((err) => console.error('Opps! There was error.', err));
 }
 
-// Function call to initialize app
+// function call to initialize app
 init();
 
 
