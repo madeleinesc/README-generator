@@ -40,7 +40,7 @@ generateMarkdown = (data) => {
   ${data.tests}
 
   #Questions
-  ${data.questions}
+  If you have any queries or questions in relation to this application please do not hesitate to get in contact with me via ${data.questions}.
 
   #Credits
   ${data.credits}

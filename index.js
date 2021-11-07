@@ -41,12 +41,12 @@ const questions = [
     {
         type: 'input',
         name: 'questions',
-        message: 'Provide instructions on how a user can get in contact for any questions.'
+        message: 'Provide your coding email.'
     },
     {
         type: 'input',
         name: 'credits',
-        message: 'Enter your github name for repo credits.'
+        message: 'Provide your github username.'
     },
     {
         type: 'list',
