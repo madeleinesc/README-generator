@@ -81,7 +81,7 @@ init = () => {
     //console log to show readme has been done
     .then(() => console.log('Congratulations! You have successfully written to README.md!'))
     //to catch error
-    .catch((err) => console.error('Opps! There was error.', err));
+    .catch((err) => console.error('Opps! There was an error.', err));
 }
 
 // function call to initialize app

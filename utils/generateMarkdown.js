@@ -27,25 +27,25 @@ generateMarkdown = (data) => {
   # Description
   ${data.description}
 
-  #Installation
+  # Installation
   ${data.installation}
 
-  #usage
+  # usage
   ${data.usage}
 
-  #Contributing
+  # Contributing
   ${data.contributing}
 
-  #Tests
+  # Tests
   ${data.tests}
 
-  #Questions
+  # Questions
   If you have any queries or questions in relation to this application, please send to do ${data.questions}.
 
-  #Credits
+  # Credits
   ${data.credits}
 
-  #License
+  # License
   ${data.license}
 
 `;
