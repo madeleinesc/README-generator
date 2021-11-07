@@ -29,6 +29,26 @@ const questions = [
         message: 'Provide instructions on how to use your project.',
     },
     {
+        type: 'input',
+        name: 'contributing',
+        message: 'Provide instructions as to how someone can contribute to your project.',
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'Provide instructions on how to test your project.',
+    },
+    {
+        type: 'input',
+        name: 'questions',
+        message: 'Provide instructions on how a user can get in contact for any questions.'
+    },
+    {
+        type: 'input',
+        name: 'credits',
+        message: 'Enter your github name for repo credits.'
+    },
+    {
         type: 'list',
         name: 'license',
         message: 'Please choose the licensing needed for this project.',
@@ -40,21 +60,9 @@ const questions = [
             'None',
         ]
     },
-    {
-        type: 'input',
-        name: 'contributing',
-        message: 'Provide instructions as to how someone can contribute to your project',
-    },
-    {
-        type: 'input',
-        name: 'tests',
-        message: 'Provide instructions on how to test your project',
-    },
-    {
-        type: 'input',
-        name: 'github',
-        message: 'Provide your github profile URL'
-    },
+
+
+
 ];
 
 // function for question prompts
@@ -63,7 +71,7 @@ userInput = () => {
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) { }
 
 // TODO: Create a function to initialize app
 
