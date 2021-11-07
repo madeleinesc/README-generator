@@ -10,7 +10,7 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
-// Created a function to generate markdown for README
+// function to generate markdown for README
 generateMarkdown = (data) => {
   return `# ${data.title}
 
@@ -40,7 +40,7 @@ generateMarkdown = (data) => {
   ${data.tests}
 
   #Questions
-  If you have any queries or questions in relation to this application please do not hesitate to get in contact with me via ${data.questions}.
+  If you have any queries or questions in relation to this application, please send to do ${data.questions}.
 
   #Credits
   ${data.credits}
@@ -51,4 +51,5 @@ generateMarkdown = (data) => {
 `;
 }
 
+// export module to use in index.js
 module.exports = generateMarkdown;
