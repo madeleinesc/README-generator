@@ -58,9 +58,17 @@ renderLicenseSection = (license) => {
 generateMarkdown = (data) => {
   return `# ${data.title}
 
- 
+  ${renderLicenseSection(data.license)}
+
+  ${renderLicenseBadge(data.license)}
+
+  ${renderLicenseLink(data.license)}
+
+  # Description
+  ${data.description}
 
   # Table of Contents:
+  - [License](#license)
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -68,11 +76,7 @@ generateMarkdown = (data) => {
   - [Tests](#tests)
   - [Questions](#questions)
   - [Credits](#credits)
-  - [License](#license)
-
-  # Description
-  ${data.description}
-
+  
   # Installation
   ${data.installation}
 
@@ -91,12 +95,6 @@ generateMarkdown = (data) => {
   # Credits
   ${data.credits}
 
-  ${renderLicenseSection(data.license)}
-
-  ${renderLicenseBadge(data.license)}
-
-  ${renderLicenseLink(data.license)}
-  
 `;
 }
 
