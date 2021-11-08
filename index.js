@@ -55,6 +55,8 @@ const questions = [
         choices: [
             'MIT',
             'Apache',
+            'GNU',
+            'BSD',
             'None',
         ]
     },

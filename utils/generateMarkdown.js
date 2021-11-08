@@ -5,31 +5,42 @@ renderLicenseBadge = (license) => {
     return '';
 
   } else if (license === 'MIT') {
-    return '![License](https://img.shields.io/badge/License-MIT9cf-?style=social&logo=appveyor)'
+    return '![License](https://img.shields.io/badge/License-MIT-9cf)'
 
   } else if (license === 'Apache') {
-    return '![License](https://img.shields.io/badge/License-Apacheff69b4-?style=social&logo=appveyor)'
+    return '![License](https://img.shields.io/badge/License-Apache-ff69b4)'
+
+  } else if (license === 'GNU') {
+    return '![License](https://img.shields.io/badge/License-GNU-yellow)'
+
+  } else if (license === 'BSD') {
+    return '![License](https://img.shields.io/badge/License-BSD-green)'
 
   }
 }
-renderLicenseBadge()
+
 
 
 // function that returns the license link
 // If there is no license, return an empty string
 renderLicenseLink = (license) => {
   if (license == 'None') {
-    return '';
+    return ``;
 
   } else if (license === 'MIT') {
-    return '![License](https://img.shields.io/badge/License-MIT9cf-?style=social&logo=appveyor)'
+    return `[${license}](https://opensource.org/licenses/MIT)`
 
   } else if (license === 'Apache') {
-    return '![License](https://img.shields.io/badge/License-Apacheff69b4-?style=social&logo=appveyor)'
+    return `[${license}](https://opensource.org/licenses/Apache-2.0)`
+
+  } else if (license === 'GNU') {
+    return `[${license}](https://www.gnu.org/licenses/gpl-3.0)`
+
+  } else if (license === 'BSD') {
+    return `[${license}](https://opensource.org/licenses/BSD-3-Clause)`
+
   }
 }
-renderLicenseLink()
-
 
 
 
@@ -41,7 +52,7 @@ renderLicenseSection = (license) => {
   };
   return '# License'
 }
-renderLicenseSection()
+
 
 // function to generate markdown for README
 generateMarkdown = (data) => {
@@ -80,9 +91,12 @@ generateMarkdown = (data) => {
   # Credits
   ${data.credits}
 
-  ${renderLicenseBadge(data.license)}
-  ${renderLicenseLink(data.license)}
   ${renderLicenseSection(data.license)}
+
+  ${renderLicenseBadge(data.license)}
+
+  ${renderLicenseLink(data.license)}
+  
 `;
 }
 
