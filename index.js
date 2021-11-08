@@ -1,8 +1,8 @@
 // packages needed for application
 const inquirer = require('inquirer');
 
-const fs = require('fs');
-const generateMarkdown = require("./utils/generateMarkdown.js");
+const fs = require('fs'); // to read/write files
+const generateMarkdown = require("./utils/generateMarkdown.js"); // for generate markdown module
 
 
 
@@ -62,15 +62,21 @@ const questions = [
     },
 ];
 
+
+
 // function for question prompts
 userInput = () => {
     return inquirer.prompt(questions)
 };
 
+
+
 // function to write README file
 writeToFile = (fileName, data) => {
     fs.writeFileSync(fileName, data)
 }
+
+
 
 // function to initialize app
 init = () => {
@@ -83,8 +89,7 @@ init = () => {
     //to catch error
     .catch((err) => console.error('Opps! There was an error.', err));
 }
-
-// function call to initialize app
+// call to initialize app
 init();
 
 
