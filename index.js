@@ -54,9 +54,7 @@ const questions = [
         message: 'Please choose the licensing needed for this project.',
         choices: [
             'MIT',
-            'GNU',
             'Apache',
-            'BSD',
             'None',
         ]
     },

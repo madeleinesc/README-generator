@@ -1,14 +1,44 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+renderLicenseBadge = (license) => {
+  if (license == 'None') {
+    return '';
 
-// TODO: Create a function that returns the license link
+  } else if (license === 'MIT') {
+    return '![License](https://img.shields.io/badge/License-MIT9cf-?style=social&logo=appveyor)'
+
+  } else if (license === 'Apache') {
+    return '![License](https://img.shields.io/badge/License-Apacheff69b4-?style=social&logo=appveyor)'
+
+  }
+}
+renderLicenseBadge()
+
+
+// function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+renderLicenseLink = (license) => {
+  if (license == 'None') {
+    return '';
+
+  } else if (license === 'MIT') {
+    return '![License](https://img.shields.io/badge/License-MIT9cf-?style=social&logo=appveyor)'
+
+  } else if (license === 'Apache') {
+    return '![License](https://img.shields.io/badge/License-Apacheff69b4-?style=social&logo=appveyor)'
+  }
+}
+renderLicenseLink()
+
+
+
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+renderLicenseSection = (license) => {
+
+
+}
 
 // function to generate markdown for README
 generateMarkdown = (data) => {
@@ -50,5 +80,5 @@ generateMarkdown = (data) => {
 `;
 }
 
-// export module to use in index.js
+// export this module to use in main module (index.js)
 module.exports = generateMarkdown;
